@@ -16,27 +16,31 @@ def skype_automation(option) -> None:
     # return pyautogui.position()
     # i = 0
     if option == 1:
-        while True:
-            # pyautogui.moveTo(923, 514, duration=2)
-            # pyautogui.click()
-            # * Switch to skype tab
-            pyautogui.keyDown("alt")
-            pyautogui.press("tab")
-            pyautogui.keyUp("alt")
-            # * Open Conversation profile
-            pyautogui.keyDown("ctrl")
-            pyautogui.press("p")
-            pyautogui.keyUp("ctrl")
-            # * Cloe conversation profile
-            pyautogui.press("esc")
-            # * Switch back to previous application
-            pyautogui.keyDown("alt")
-            pyautogui.press("tab")
-            pyautogui.keyUp("alt")
+        try:
+            while True:
+                # pyautogui.moveTo(923, 514, duration=2)
+                # pyautogui.click()
+                # * Switch to skype tab
+                pyautogui.keyDown("alt")
+                pyautogui.press("tab")
+                pyautogui.keyUp("alt")
+                # * Open Conversation profile
+                pyautogui.keyDown("ctrl")
+                pyautogui.press("p")
+                pyautogui.keyUp("ctrl")
+                # * Cloe conversation profile
+                pyautogui.press("esc")
+                # * Switch back to previous application
+                pyautogui.keyDown("alt")
+                pyautogui.press("tab")
+                pyautogui.keyUp("alt")
 
-            # pyautogui.moveTo(3504, 446, duration=2)
-            # pyautogui.click()
-            time.sleep(30)  # * Sleep for 30 seconds and start process again
+                # pyautogui.moveTo(3504, 446, duration=2)
+                # pyautogui.click()
+                # * Sleep for 30 seconds and start process again
+                time.sleep(30)
+        except KeyboardInterrupt:
+            print("Thank you for using the tool")
     elif option == 2:
         # return pyautogui.position()
         pyautogui.moveTo(33, 63, duration=1)
@@ -61,7 +65,7 @@ def skype_automation(option) -> None:
         pyautogui.moveTo(364, 127, duration=1)
         pyautogui.click()
         pyautogui.press("esc")
-        return True
+        return "Done"
     elif option == 3:
         # return pyautogui.position()
         # * move to position the cursor on the profile icon at top left corner of skype
@@ -87,7 +91,7 @@ def skype_automation(option) -> None:
         pyautogui.click()  # * click on done button
         pyautogui.press("esc")  # * press esc key
         ctypes.windll.user32.LockWorkStation()  # * Used to lock windows desktop
-        return True
+        return "Done"
     elif option == 4:
         # return pyautogui.position()
         pyautogui.moveTo(33, 63, duration=1)
@@ -102,7 +106,7 @@ def skype_automation(option) -> None:
         pyautogui.moveTo(391, 389, duration=1)
         pyautogui.click()  # * click on clear mood message button
         pyautogui.press("esc")
-        return True
+        return "Done"
     elif option == 5:
         # return pyautogui.position()
         pyautogui.moveTo(33, 63, duration=1)
@@ -116,7 +120,7 @@ def skype_automation(option) -> None:
         pyautogui.moveTo(391, 389, duration=1)
         pyautogui.click()
         pyautogui.press("esc")
-        return True
+        return "Done"
     else:
         return "Incorrect Option"
         # i += 1
