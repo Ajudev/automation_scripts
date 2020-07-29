@@ -40,7 +40,7 @@ def skype_automation(option) -> None:
                 # * Sleep for 30 seconds and start process again
                 time.sleep(30)
         except KeyboardInterrupt:
-            print("Thank you for using the tool")
+            return "Thank you for using the tool"
     elif option == 2:
         # return pyautogui.position()
         pyautogui.moveTo(33, 63, duration=1)
